@@ -1,0 +1,16 @@
+name = "frontmatter"
+version = "1.0.0"
+gleam = ">= 1.9.0"
+description = "Extract frontmatter from text documents!"
+licences = ["Apache-2.0"]
+
+repository = { type = "github", user = "lpil", repo = "frontmatter" }
+links = [
+  { title = "Sponsor", href = "https://github.com/sponsors/lpil" },
+]
+
+[dependencies]
+gleam_stdlib = ">= 0.44.0 and < 2.0.0"
+
+[dev-dependencies]
+gleeunit = ">= 1.0.0 and < 2.0.0"
