@@ -35,6 +35,14 @@ Hello, Joe!"
   |> should.equal(frontmatter.Extracted(option.None, "---\nHello, Joe!"))
 }
 
+pub fn empty_test() {
+  "---
+---
+Hello!"
+  |> frontmatter.extract
+  |> should.equal(frontmatter.Extracted(option.Some(""), "Hello!"))
+}
+
 pub fn extract_test() {
   "---
 do

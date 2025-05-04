@@ -26,6 +26,9 @@ pub type Extracted {
 ///
 pub fn extract(input: String) -> Extracted {
   case input {
+    "---\n---\n" <> rest | "---\r\n---\r\n" <> rest ->
+      Extracted(frontmatter: option.Some(""), content: rest)
+
     "---\n" <> rest ->
       case string.split_once(rest, on: "\n---\n") {
         Ok(#(frontmatter, content)) ->
